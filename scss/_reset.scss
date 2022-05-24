@@ -14,7 +14,7 @@ button {
   cursor: pointer;
   border: 0;
   background-color: transparent;
-  &[disabled] {
+  &[disabled] { // when you have this property disabled the cursor should not be allowed
     cursor: not-allowed;
   }
 }
