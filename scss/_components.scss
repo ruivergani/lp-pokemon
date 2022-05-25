@@ -37,3 +37,44 @@ body{
         }
     }
 }
+.search{
+    background: #FFFFFF;
+    border-radius: 12.2rem;
+    height: 5.6rem;
+    width: 100%;
+    max-width: 40.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 0.8rem;
+    input[type=text]{
+        border: none;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #A0AFBA;
+        outline: none;
+        width: 80%;
+        &::placeholder{
+            color: #A0AFBA;
+        }
+    }
+    button{
+        width: 4.2rem;
+        height: 4.2rem;
+        background: rgba(158, 185, 225, 0.1);
+        border-radius: 12.2rem;
+        @include centerTotalFlex;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: border-color .3s;
+        &:hover{
+            border: 1px solid #3E75C3;
+        }
+    }
+    border: 1px solid transparent;
+    transition: border-color .3s;
+    &:hover{
+        border: 1px solid #3E75C3;
+    }
+}
