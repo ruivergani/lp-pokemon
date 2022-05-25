@@ -63,6 +63,57 @@ ul {
   padding: 0px 1.5rem;
 }
 
+body {
+  background-color: black;
+}
+
+.tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 12.1rem;
+  border-radius: 24.4rem;
+  gap: 0.8rem;
+  padding: 6px 4px;
+}
+.tag .icon {
+  background: rgba(194, 0, 1, 0.15);
+  border-radius: 24.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 2.6rem;
+  height: 2.6rem;
+}
+.tag .icon img {
+  width: 16px;
+  height: 24px;
+}
+.tag span {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: #C20001;
+}
+.tag.blue-tag .icon {
+  background: rgba(63, 103, 186, 0.15);
+}
+.tag.blue-tag span {
+  color: #3F67BA;
+}
+
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
