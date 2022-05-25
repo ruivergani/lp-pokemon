@@ -521,6 +521,24 @@ ul {
   background-color: rgba(139, 206, 193, 0.1);
 }
 
+.btn-load-more {
+  background: rgba(63, 93, 179, 0.1);
+  border-radius: 6px;
+  padding: 1.4rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: -0.01em;
+  color: #3F5DB3;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-load-more:hover {
+  background-color: #3F5DB3;
+  color: white;
+}
+
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
