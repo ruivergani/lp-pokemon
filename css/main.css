@@ -439,6 +439,92 @@ body {
   background-color: rgba(132, 190, 179, 0.2);
 }
 
+.tag-type {
+  display: inline-block;
+  padding: 0rem 2.5rem;
+  line-height: 2.4rem;
+  border-radius: 0.2rem;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.01em;
+}
+.tag-type.ghost {
+  color: #616EB7;
+  background-color: rgba(97, 110, 183, 0.1);
+}
+.tag-type.bug {
+  color: #9BBA48;
+  background-color: rgba(155, 186, 72, 0.1);
+}
+.tag-type.dark {
+  color: #595761;
+  background-color: rgba(89, 87, 97, 0.1);
+}
+.tag-type.dragon {
+  color: #2C6AC1;
+  background-color: rgba(44, 106, 193, 0.1);
+}
+.tag-type.eletric {
+  color: #D5BC34;
+  background-color: rgba(238, 217, 103, 0.1);
+}
+.tag-type.fairy {
+  color: #E296E1;
+  background-color: rgba(226, 150, 225, 0.1);
+}
+.tag-type.fighting {
+  color: #C44D61;
+  background-color: rgba(196, 77, 97, 0.1);
+}
+.tag-type.ground {
+  color: #CE8056;
+  background-color: rgba(206, 128, 86, 0.1);
+}
+.tag-type.ice {
+  color: #71BAAC;
+  background-color: rgba(139, 206, 193, 0.1);
+}
+.tag-type.normal {
+  color: #919191;
+  background-color: rgba(160, 162, 159, 0.1);
+}
+.tag-type.poison {
+  color: #AC6ACA;
+  background-color: rgba(172, 106, 202, 0.1);
+}
+.tag-type.psychic {
+  color: #EB8B85;
+  background-color: rgba(235, 139, 133, 0.1);
+}
+.tag-type.rock {
+  color: #84BEB3;
+  background-color: rgba(139, 206, 193, 0.1);
+}
+.tag-type.grass {
+  color: #73B861;
+  background-color: rgba(92, 164, 138, 0.1);
+}
+.tag-type.steal {
+  color: #6594A1;
+  background-color: rgba(101, 148, 161, 0.1);
+}
+.tag-type.water {
+  color: #4F77BE;
+  background-color: rgba(136, 163, 212, 0.1);
+}
+.tag-type.fire {
+  color: #E96303;
+  background-color: rgba(233, 99, 3, 0.1);
+}
+.tag-type.flying {
+  color: #758CBD;
+  background-color: rgba(166, 187, 232, 0.1);
+}
+.tag-type.rock {
+  color: #84BEB3;
+  background-color: rgba(139, 206, 193, 0.1);
+}
+
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
