@@ -294,6 +294,14 @@ body {
   padding: 13px 40px 24px 40px;
   position: relative;
   z-index: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card-pokemon:hover {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-box-shadow: 0px 12px 40px -5px rgba(90, 96, 100, 0.3);
+  box-shadow: 0px 12px 40px -5px rgba(90, 96, 100, 0.3);
 }
 .card-pokemon .image {
   position: relative;
