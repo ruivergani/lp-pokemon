@@ -199,3 +199,126 @@ body{
         }
     }
 }
+.card-pokemon{
+    width: 100%;
+    max-width: 28rem;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
+    border-radius: 1.2rem;
+    height: 30.4rem;
+    padding: 13px 40px 24px 40px;
+    position: relative;
+    z-index: 1;
+    .image{
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        @include centerTotalFlex;
+        padding: 1.8rem;
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-bottom: 14px;
+        // create specific background color for each class of pokemon
+        &:after{
+            content: "";
+            width: 16.5rem;
+            height: 16.5rem;
+            background-color: transparent;
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+        }
+    }
+    .info{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 21.8rem;
+        .text{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            span{
+                font-weight: 500;
+                font-size: 1.3rem;
+                line-height: 150%;
+                color: #7A7D80;
+                margin-bottom: 6px;
+                display: block;
+                text-align: left;
+            }   
+        }
+        .icon{
+            width: 2.8rem;
+            height: 2.8rem;
+            @include centerTotalFlex;
+            margin-bottom: 1rem;
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+    &.ghost{
+        .image{
+            &:after{
+                background-color: rgba(97, 110, 183, 0.2);
+            }
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+    &.grass{
+        .image{
+            &:after{
+                background-color: rgba(114, 184, 97, 0.2);
+            }
+        }
+    }
+
+}
