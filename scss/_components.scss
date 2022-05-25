@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: white;
 }
 .tag{
     display: flex;
@@ -76,5 +76,126 @@ body{
     transition: border-color .3s;
     &:hover{
         border: 1px solid #3E75C3;
+    }
+}
+.type-filter{
+    display: flex;
+    gap: 0.5rem;
+    @include centerTotalFlex;
+    // DEFAULT CONFIGURATION FOR THE TAGS   
+    // put the component in black and white tons
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all .3s;
+    &:hover{
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+    .icon{
+        // creating the mask for icon
+        width: 2.8rem;
+        height: 2.8rem;
+        @include centerTotalFlex;
+    }
+    span{
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 150%;
+    }  
+    // for all tags variations of colors in the span
+    &.ghost{
+        span{
+            color: #616EB7;
+        }
+    }
+    &.bug{
+        span{
+            color: #9BBA48;
+        }
+    }
+    &.dark{
+        span{
+            color: #595761;
+        }
+    }
+    &.dragon{
+        span{
+            color: #2C6AC1;
+        }
+    }
+    &.eletric{
+        span{
+            color: #D5BC34;
+        }
+    }
+    &.fairy{
+        span{
+            color: #E296E1;
+        }
+    }
+    &.fighting{
+        span{
+            color: #C44D61;
+        }
+    }
+    &.ground{
+        span{
+            color: #CE8056;
+        }
+    }
+    &.ice{
+        span{
+            color: #71BAAC;
+        }
+    }
+    &.normal{
+        span{
+            color: #919191;
+        }
+    }
+    &.poison{
+        span{
+            color: #AC6ACA;
+        }
+    }
+    &.psychic{
+        span{
+            color: #EB8B85;
+        }
+    }
+    &.rock{
+        span{
+            color: #84BEB3;
+        }
+    }
+    &.grass{
+        span{
+            color: #73B861;
+        }
+    }
+    &.steal{
+        span{
+            color: #6594A1;
+        }
+    }
+    &.water{
+        span{
+            color: #4F77BE;
+        }
+    }
+    &.fire{
+        span{
+            color: #E96303;
+        }
+    }
+    &.flying{
+        span{
+            color: #758CBD;
+        }
+    }
+    &.rock{
+        span{
+            color: #84BEB3;
+        }
     }
 }

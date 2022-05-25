@@ -64,7 +64,7 @@ ul {
 }
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 .tag {
@@ -182,6 +182,105 @@ body {
 }
 .search:hover {
   border: 1px solid #3E75C3;
+}
+
+.type-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.type-filter:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.type-filter .icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.type-filter span {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+.type-filter.ghost span {
+  color: #616EB7;
+}
+.type-filter.bug span {
+  color: #9BBA48;
+}
+.type-filter.dark span {
+  color: #595761;
+}
+.type-filter.dragon span {
+  color: #2C6AC1;
+}
+.type-filter.eletric span {
+  color: #D5BC34;
+}
+.type-filter.fairy span {
+  color: #E296E1;
+}
+.type-filter.fighting span {
+  color: #C44D61;
+}
+.type-filter.ground span {
+  color: #CE8056;
+}
+.type-filter.ice span {
+  color: #71BAAC;
+}
+.type-filter.normal span {
+  color: #919191;
+}
+.type-filter.poison span {
+  color: #AC6ACA;
+}
+.type-filter.psychic span {
+  color: #EB8B85;
+}
+.type-filter.rock span {
+  color: #84BEB3;
+}
+.type-filter.grass span {
+  color: #73B861;
+}
+.type-filter.steal span {
+  color: #6594A1;
+}
+.type-filter.water span {
+  color: #4F77BE;
+}
+.type-filter.fire span {
+  color: #E96303;
+}
+.type-filter.flying span {
+  color: #758CBD;
+}
+.type-filter.rock span {
+  color: #84BEB3;
 }
 
 h1, h2, h3 {
