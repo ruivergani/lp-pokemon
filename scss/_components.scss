@@ -102,97 +102,92 @@
     // for all tags variations of colors in the span
     &.ghost{
         span{
-            color: #616EB7;
+            color: var(--type-ghost);
         }
     }
     &.bug{
         span{
-            color: #9BBA48;
+            color: var(--type-bug);
         }
     }
     &.dark{
         span{
-            color: #595761;
+            color: var(--type-dark);
         }
     }
     &.dragon{
         span{
-            color: #2C6AC1;
+            color: var(--type-dragon);
         }
     }
     &.eletric{
         span{
-            color: #D5BC34;
+            color: var(--type-electric);
         }
     }
     &.fairy{
         span{
-            color: #E296E1;
+            color: var(--type-fairy);
         }
     }
     &.fighting{
         span{
-            color: #C44D61;
+            color: var(--type-fighting);
         }
     }
     &.ground{
         span{
-            color: #CE8056;
+            color: var(--type-ground);
         }
     }
     &.ice{
         span{
-            color: #71BAAC;
+            color: var(--type-ice);
         }
     }
     &.normal{
         span{
-            color: #919191;
+            color: var(--type-normal);
         }
     }
     &.poison{
         span{
-            color: #AC6ACA;
+            color: var(--type-poison);
         }
     }
     &.psychic{
         span{
-            color: #EB8B85;
+            color: var(--type-psychic);
         }
     }
     &.rock{
         span{
-            color: #84BEB3;
+            color: var(--type-rock);
         }
     }
     &.grass{
         span{
-            color: #73B861;
+            color: var(--type-grass);
         }
     }
     &.steal{
         span{
-            color: #6594A1;
+            color: var(--type-steal);
         }
     }
     &.water{
         span{
-            color: #4F77BE;
+            color: var(--type-water);
         }
     }
     &.fire{
         span{
-            color: #E96303;
+            color: var(--type-fire);
         }
     }
     &.flying{
         span{
-            color: #758CBD;
-        }
-    }
-    &.rock{
-        span{
-            color: #84BEB3;
+            color: var(--type-flying);
         }
     }
 }
@@ -386,13 +381,6 @@
             }
         }
     }
-    &.rock{
-        .image{
-            &:after{
-                background-color: rgba(132, 190, 179, 0.2);
-            }
-        }
-    }
 
 }
 .tag-type{
@@ -405,80 +393,76 @@
     letter-spacing: -0.01em;
     // for all tags variations of colors in the span
     &.ghost{
-        color: #616EB7;
+        color: var(--type-ghost);
         background-color: rgba(97, 110, 183, 0.1);
     }
     &.bug{
-        color: #9BBA48;
+        color: var(--type-bug);
         background-color: rgba(155, 186, 72, 0.1);
     }
     &.dark{
-        color: #595761;
+        color: var(--type-dark);
         background-color: rgba(89, 87, 97, 0.1);
     }
     &.dragon{
-        color: #2C6AC1;
+        color: var(--type-dragon);
         background-color: rgba(44, 106, 193, 0.1);
     }
     &.eletric{
-        color: #D5BC34;
+        color: var(--type-electric);
         background-color: rgba(238, 217, 103, 0.1);
     }
     &.fairy{
-        color: #E296E1;
+        color: var(--type-fairy);
         background-color: rgba(226, 150, 225, 0.1);
     }
     &.fighting{
-        color: #C44D61;
+        color: var(--type-fighting);
         background-color: rgba(196, 77, 97, 0.1);
     }
     &.ground{
-        color: #CE8056;
+        color: var(--type-ground);
         background-color: rgba(206, 128, 86, 0.1);
     }
     &.ice{
-        color: #71BAAC;
+        color: var(--type-ice);
         background-color: rgba(139, 206, 193, 0.1);
     }
     &.normal{
-        color: #919191;
+        color: var(--type-normal);
         background-color: rgba(160, 162, 159, 0.1);
     }
     &.poison{
-        color: #AC6ACA;
+        color: var(--type-poison);
         background-color: rgba(172, 106, 202, 0.1);
     }
     &.psychic{
-        color: #EB8B85;
+        color: var(--type-psychic);
         background-color: rgba(235, 139, 133, 0.1);
     }
     &.rock{
-        color: #84BEB3;
+        color: var(--type-rock);
         background-color: rgba(139, 206, 193, 0.1);
     }
     &.grass{
-        color: #73B861;
+        color: var(--type-grass);
         background-color: rgba(92, 164, 138, 0.1);
     }
     &.steal{
-        color: #6594A1;
+        color: var(--type-steal);
         background-color: rgba(101, 148, 161, 0.1);
     }
     &.water{
-        color: #4F77BE;
+        color: var(--type-water);
         background-color: rgba(136, 163, 212, 0.1);
     }
     &.fire{
-        color: #E96303;
+        color: var(--type-fire);
         background-color: rgba(233, 99, 3, 0.1);
     }
     &.flying{
-        color: #758CBD;
+        color: var(--type-flying);
         background-color: rgba(166, 187, 232, 0.1);
-    }
-    &.rock{
-        color: #84BEB3;
-        background-color: rgba(139, 206, 193, 0.1);
     }
 }
 .btn-load-more{
