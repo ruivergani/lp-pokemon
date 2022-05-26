@@ -510,7 +510,18 @@
         border-radius: 16px;
         background-color: #fff;
         .close{
-
+            position: absolute;
+            top: -44px;
+            right: 0;
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            border-radius: 8px;
+            @include centerTotalFlex; // mixin
+            transition: all .3s;
+            &:hover{
+                background: rgba(255, 255, 255, 0.92);
+            }
         }
         .left-container{
 

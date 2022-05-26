@@ -566,6 +566,29 @@ ul {
   border-radius: 16px;
   background-color: #fff;
 }
+.modal .box .close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal .box .close:hover {
+  background: rgba(255, 255, 255, 0.92);
+}
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
