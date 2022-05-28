@@ -529,6 +529,19 @@ ul {
   color: white;
 }
 
+.open-modal .modal {
+  opacity: 1;
+  pointer-events: all;
+}
+.open-modal .modal .box {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -545,6 +558,10 @@ ul {
   -ms-flex-pack: center;
   justify-content: center;
   z-index: 2022;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .modal[type-pokemon-modal=grass] .box .left-container {
   background: url("../img/bg-types/grass.svg");

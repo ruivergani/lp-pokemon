@@ -481,6 +481,18 @@
         color: white;
     }
 }
+// when you want the modal to load = when document.html has class openModal
+.open-modal{
+    .modal{
+        opacity: 1;
+        pointer-events: all;
+        .box{
+            transform: translateY(0); // estado padrao
+            transition: transform .3s ease-in;
+        }
+    }
+}
+
 .modal{
     position: fixed;
     top: 0;
@@ -491,6 +503,10 @@
     align-items: center;
     justify-content: center;
     z-index: 2022;
+    // hide modal for the animation when open
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
     // change background type based on the type functionality modal
     &[type-pokemon-modal="grass"]{
         .box{
@@ -644,6 +660,7 @@
         box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
         border-radius: 16px;  
         display: flex;
+        // box animation de baixo para cima
         transform: translateY(4rem);
         transition: transform .3s ease-in;
         
