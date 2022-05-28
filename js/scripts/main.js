@@ -1,39 +1,18 @@
-// scripts do slide principal
-var slide_hero = new Swiper(".slide-hero", {
-  effect: 'fade',
-  pagination: {
-    el: ".slide-hero .main-area .area-explore .swiper-pagination",
-  },
+// script open modal (remember is a lot of cards where you can open modal)
+
+const cardPokemon = document.querySelectorAll('.js-open-details-pokemon'); // all elements that have this class
+const closeButton = document.querySelector('.js-close-modal-details-pokemon'); // get close button modal
+
+// function to separate
+function openDetailsPokemon(){
+  document.documentElement.classList.add('open-modal'); // add the class to the HTML document
+}
+function closeDetailsPokemon(){
+  document.documentElement.classList.remove('open-modal'); // remove the class to the HTML document
+}
+
+cardPokemon.forEach(card => { // each card that you click
+   card.addEventListener('click', openDetailsPokemon);
 });
 
-const cardPokemon  = document.querySelectorAll('.js-open-details-pokemon');
-const btnCloseModal = document.querySelector('.js-close-modal-details-pokemon');
-const countPokemons = document.getElementById('js-count-pokemons');
-
-cardPokemon.forEach(card => {
-  card.addEventListener('click', openDetailsPokemon);
-})
-
-if(btnCloseModal) {
-  btnCloseModal.addEventListener('click', closeDetailsPokemon);
-}
-
-const btnDropdownSelect = document.querySelector('.js-open-select-custom');
-
-btnDropdownSelect.addEventListener('click', () => {
-  btnDropdownSelect.parentElement.classList.toggle('active');
-})
-
-const areaPokemons = document.getElementById('js-list-pokemons');
-
-function openDetailsPokemon() {
-  document.documentElement.classList.add('open-modal');
-}
-
-function closeDetailsPokemon() {
-  document.documentElement.classList.remove('open-modal');
-}
-
-
-
-
+closeButton.addEventListener('click', closeDetailsPokemon);
