@@ -667,14 +667,27 @@
             background-repeat: no-repeat;
             background-position: center center;
             .icon{
-
+                position: absolute;
+                width: 3.4rem;
+                height: 3.4rem;
+                background-color: #FFFFFF;
+                border-radius: 50%;
+                @include centerTotalFlex;
+                top: 20px;
+                right: 20px;
             }
             .image{
-
+                position: absolute;
+                left: 1.4rem;
+                bottom: 13.8rem;
+                width: 20.2rem;
+                img{
+                    width: 100%;
+                }
             }
         }
         .right-container{
-
+            padding: 3.5rem 7.2rem 2.9rem 7.4rem;
         }
     }
 
