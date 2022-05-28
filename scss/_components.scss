@@ -799,16 +799,30 @@
                                 top: 0;
                                 left: 0;
                                 background-color: #C20001;
+                                z-index: 0;
                             }
                             //this will be the white part (separator)
                             .separator{
-        
+                                display: flex;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                align-items: center;
+                                justify-content: center;
+                                li{
+                                    width: 0.4rem;
+                                    height: 0.3rem;
+                                    background-color: #FFFFFF;
+                                    z-index: 10;
+                                    &:not(:first-child){
+                                        margin-left: 5.4rem;
+                                    }
+                                }
                             }
-                        } 
-                        
+                        }   
                     }
                 }
-                
             }
         }
     }

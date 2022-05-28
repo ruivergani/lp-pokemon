@@ -824,7 +824,33 @@ ul {
   top: 0;
   left: 0;
   background-color: #C20001;
+  z-index: 0;
 }
+.modal .box .right-container .stats .all .item .bar-status .separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.modal .box .right-container .stats .all .item .bar-status .separator li {
+  width: 0.4rem;
+  height: 0.3rem;
+  background-color: #FFFFFF;
+  z-index: 10;
+}
+.modal .box .right-container .stats .all .item .bar-status .separator li:not(:first-child) {
+  margin-left: 5.4rem;
+}
+
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
