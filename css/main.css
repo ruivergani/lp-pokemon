@@ -614,17 +614,23 @@ ul {
 }
 .modal .box {
   position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 71rem;
   height: 50.8rem;
+  background-color: #ffffff;
+  z-index: 1;
   -webkit-box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
   box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
   border-radius: 16px;
-  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform: translateY(4rem);
+  transform: translateY(4rem);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 .modal .box .close {
   position: absolute;
@@ -685,9 +691,140 @@ ul {
   width: 100%;
 }
 .modal .box .right-container {
-  padding: 3.5rem 7.2rem 2.9rem 7.4rem;
+  padding: 3.5rem 5rem 3.5rem 7.4rem;
+  width: 100%;
 }
-
+.modal .box .right-container .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.modal .box .right-container .name span {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 8px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #7A7D80;
+  padding-bottom: 8px;
+}
+.modal .box .right-container .type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.modal .box .right-container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4.8rem;
+  width: 100%;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.modal .box .right-container .info li span {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6rem;
+  letter-spacing: -0.01em;
+  color: #7A7D80;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.modal .box .right-container .info li strong {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: -0.01em;
+  color: #2F3133;
+}
+.modal .box .right-container .weak {
+  margin-bottom: 2.5rem;
+}
+.modal .box .right-container .weak h4 {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.01em;
+  color: #4D5053;
+  margin-bottom: 1.6rem;
+}
+.modal .box .right-container .weak ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+.modal .box .right-container .stats h5 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.01em;
+  color: #4D5053;
+  margin-bottom: 1.6rem;
+}
+.modal .box .right-container .stats .all .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.modal .box .right-container .stats .all .item:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+.modal .box .right-container .stats .all .item span {
+  display: block;
+  width: 100%;
+  max-width: 6.8rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #7A7D80;
+}
+.modal .box .right-container .stats .all .item .bar-status {
+  position: relative;
+  width: 100%;
+  max-width: 28.3rem;
+  height: 0.3rem;
+  background-color: #EFF3F6;
+}
+.modal .box .right-container .stats .all .item .bar-status .bar {
+  width: 56%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #C20001;
+}
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;

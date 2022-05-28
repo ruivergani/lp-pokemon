@@ -636,14 +636,16 @@
     }
     .box{
         position: relative;
-        z-index: 1;
         width: 100%;
         max-width: 71rem;
         height: 50.8rem;
+        background-color: #ffffff;
+        z-index: 1;
         box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
-        border-radius: 16px;
-        background-color: #fff;
+        border-radius: 16px;  
         display: flex;
+        transform: translateY(4rem);
+        transition: transform .3s ease-in;
         
         .close{
             position: absolute;
@@ -687,7 +689,127 @@
             }
         }
         .right-container{
-            padding: 3.5rem 7.2rem 2.9rem 7.4rem;
+            padding: 3.5rem 5rem 3.5rem 7.4rem;
+            width: 100%;
+            .name{
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                margin-bottom: 1rem;
+                span{
+                    font-family: 'Montserrat', sans-serif;
+                    margin-left: 8px;
+                    font-weight: 400;
+                    font-size: 1.6rem;
+                    line-height: 20px;
+                    letter-spacing: -0.01em;
+                    color: #7A7D80;
+                    padding-bottom: 8px;
+                }
+            }
+            .type{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+                flex-wrap: wrap;
+                margin-bottom: 2.5rem;
+            }
+            .info{
+                display: flex;
+                gap: 4.8rem;
+                width: 100%;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                margin-bottom: 2.5rem;
+                li{
+                    span{
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 1.6rem;
+                        letter-spacing: -0.01em;
+                        color: #7A7D80;
+                        display: block;
+                        margin-bottom: 0.4rem;
+                    }
+                    strong{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        font-size: 1.4rem;
+                        line-height: 1.7rem;
+                        letter-spacing: -0.01em;
+                        color: #2F3133;
+                    }
+                }
+            }
+            .weak{
+                margin-bottom: 2.5rem;
+                h4{
+                    font-family: 'Inter';
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                    line-height: 1.6rem;
+                    letter-spacing: -0.01em;
+                    color: #4D5053;
+                    margin-bottom: 1.6rem;
+                }
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    gap: 1rem;
+                }
+            }
+            .stats{
+                h5{
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                    line-height: 1.6rem;
+                    letter-spacing: -0.01em;
+                    color: #4D5053;
+                    margin-bottom: 1.6rem;
+                }
+                .all{
+                    .item{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        &:not(:last-child){
+                            margin-bottom: 1.3rem;
+                        }
+                        span{
+                            display: block;
+                            width: 100%;
+                            max-width: 6.8rem;
+                            font-size: 1.2rem;
+                            line-height: 1.5rem;
+                            color: #7A7D80;
+                        }  
+                        .bar-status{
+                            position: relative;
+                            width: 100%;
+                            max-width: 28.3rem;
+                            height: 0.3rem;
+                            background-color: #EFF3F6;
+                            // this will be the red part
+                            .bar{
+                                width: 56%; // get from API
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-color: #C20001;
+                            }
+                            //this will be the white part (separator)
+                            .separator{
+        
+                            }
+                        } 
+                        
+                    }
+                }
+                
+            }
         }
     }
 
