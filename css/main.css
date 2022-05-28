@@ -546,6 +546,63 @@ ul {
   justify-content: center;
   z-index: 2022;
 }
+.modal[type-pokemon-modal=grass] .box .left-container {
+  background: url("../img/bg-types/grass.svg");
+}
+.modal[type-pokemon-modal=grass] .box .left-container {
+  background: url("../img/bg-types/grass.svg");
+}
+.modal[type-pokemon-modal=bug] .box .left-container {
+  background: url("../img/bg-types/bug.svg");
+}
+.modal[type-pokemon-modal=dark] .box .left-container {
+  background: url("../img/bg-types/dark.svg");
+}
+.modal[type-pokemon-modal=dragon] .box .left-container {
+  background: url("../img/bg-types/dragon.svg");
+}
+.modal[type-pokemon-modal=electric] .box .left-container {
+  background: url("../img/bg-types/electric.svg");
+}
+.modal[type-pokemon-modal=fairy] .box .left-container {
+  background: url("../img/bg-types/fairy.svg");
+}
+.modal[type-pokemon-modal=steal] .box .left-container {
+  background: url("../img/bg-types/steal.svg");
+}
+.modal[type-pokemon-modal=fighting] .box .left-container {
+  background: url("../img/bg-types/fighting.svg");
+}
+.modal[type-pokemon-modal=ground] .box .left-container {
+  background: url("../img/bg-types/ground.svg");
+}
+.modal[type-pokemon-modal=ice] .box .left-container {
+  background: url("../img/bg-types/ice.svg");
+}
+.modal[type-pokemon-modal=normal] .box .left-container {
+  background: url("../img/bg-types/normal.svg");
+}
+.modal[type-pokemon-modal=poison] .box .left-container {
+  background: url("../img/bg-types/poison.svg");
+}
+.modal[type-pokemon-modal=psychic] .box .left-container {
+  background: url("../img/bg-types/psychic.svg");
+}
+.modal[type-pokemon-modal=rock] .box .left-container {
+  background: url("../img/bg-types/rock.svg");
+}
+.modal[type-pokemon-modal=ghost] .box .left-container {
+  background: url("../img/bg-types/ghost.svg");
+}
+.modal[type-pokemon-modal=water] .box .left-container {
+  background: url("../img/bg-types/water.svg");
+}
+.modal[type-pokemon-modal=fire] .box .left-container {
+  background: url("../img/bg-types/fire.svg");
+}
+.modal[type-pokemon-modal=flying] .box .left-container {
+  background: url("../img/bg-types/flying.svg");
+}
 .modal .overlay {
   position: fixed;
   top: 0;
@@ -597,6 +654,8 @@ ul {
   width: 100%;
   max-width: 19.1rem;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
