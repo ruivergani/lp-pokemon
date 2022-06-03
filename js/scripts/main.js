@@ -20,6 +20,7 @@ closeButton.addEventListener('click', closeDetailsPokemon);
 
 // Configuration for the swiper slide to work
 var slide_hero = new Swiper(".slide-hero", {
+  effect: 'fade',
   pagination: {
     el: "",
   },
