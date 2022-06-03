@@ -1104,6 +1104,22 @@ footer .text p {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
+.s-area-slide-hero .slide-hero .swiper-slide .main-area .area-explore .swiper-pagination {
+  position: relative;
+}
+.s-area-slide-hero .slide-hero .swiper-slide .main-area .area-explore .swiper-pagination .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  background: #FFFFFF;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.s-area-slide-hero .slide-hero .swiper-slide .main-area .area-explore .swiper-pagination .swiper-pagination-bullet:not(:first-child) {
+  margin-left: 0.6rem;
+}
+.s-area-slide-hero .slide-hero .swiper-slide .main-area .area-explore .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
 .s-area-slide-hero .slide-hero .swiper-slide::after {
   content: "";
   width: 100%;

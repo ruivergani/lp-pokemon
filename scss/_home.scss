@@ -85,7 +85,6 @@
                     display: flex;
                     align-items: flex-end;
                     justify-content: space-between;
-
                     .txt{
                         position: relative;
                         display: flex;
@@ -110,6 +109,22 @@
                             line-height: 150%;
                             color: #FFFFFF;
                             transform: rotate(-90deg);
+                        }
+                    }
+                    .swiper-pagination{
+                        position: relative;
+                        .swiper-pagination-bullet{
+                            width: 7px;
+                            height: 7px;
+                            background: #FFFFFF;
+                            opacity: 0.5;
+                            cursor: pointer;
+                            &:not(:first-child){
+                                margin-left: 0.6rem;
+                            }
+                            &-active{
+                                opacity: 1;
+                            }
                         }
                     }
                 }

@@ -22,6 +22,7 @@ closeButton.addEventListener('click', closeDetailsPokemon);
 var slide_hero = new Swiper(".slide-hero", {
   effect: 'fade',
   pagination: {
-    el: "",
+    // set the path to the swiper pagination div in the html
+    el: ".s-area-slide-hero .slide-hero .swiper-slide .main-area .area-explore .swiper-pagination",
   },
 });
