@@ -24,6 +24,13 @@
                             }
                         }
                     }
+                    .area-explore{
+                        .txt{
+                            .icon{
+                                background: rgba(175, 192, 227, 0.3);
+                            }
+                        }
+                    }
                 }
             }
             .main-area{
@@ -32,6 +39,11 @@
                 height: 70.6rem;
                 background-size: cover;
                 padding-top: 13.3rem;
+                position: relative;
+                .container{
+                    position: relative; // align inside container
+                    height: 100%;
+                }
                 .text{
                     .tag{
                         margin: 0 auto;
@@ -62,6 +74,43 @@
                         }
                         z-index: 1;
                         margin-top: 12.2rem;
+                    }
+                }
+                .area-explore{
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 8rem;
+                    z-index: 10;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+
+                    .txt{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        left: 2rem;
+                        gap: 3.5rem;
+                        flex-direction: column-reverse;
+                        .icon{
+                            width: 4rem;
+                            height: 4rem;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: #C90C0C;
+                        }
+                        span{
+                            display: block;
+                            font-family: 'Inter';
+                            font-weight: 500;
+                            font-size: 13px;
+                            line-height: 150%;
+                            color: #FFFFFF;
+                            transform: rotate(-90deg);
+                        }
                     }
                 }
             }
