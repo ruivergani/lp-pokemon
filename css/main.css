@@ -1023,8 +1023,17 @@ footer .text p {
 }
 .s-area-slide-hero .slide-hero .swiper-slide .main-area .text .image {
   position: relative;
+  width: 100%;
+  max-width: 79.8rem;
+  margin: 0 auto;
   z-index: 1;
-  margin-top: 16.2rem;
+  margin-top: 12.2rem;
+}
+.s-area-slide-hero .slide-hero .swiper-slide .main-area .text .image .lights {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  margin-left: -8.5rem;
 }
 .s-area-slide-hero .slide-hero .swiper-slide::after {
   content: "";

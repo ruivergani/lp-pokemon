@@ -41,8 +41,17 @@
                     }
                     .image{
                         position: relative;
+                        width: 100%;
+                        max-width: 79.8rem; // max width
+                        margin: 0 auto;
+                        .lights{
+                            position: absolute;
+                            top: -50px;
+                            left: 50%;
+                            margin-left: -8.5rem; // largura da imagem divido por 2
+                        }
                         z-index: 1;
-                        margin-top: 16.2rem;
+                        margin-top: 12.2rem;
                     }
                 }
             }
