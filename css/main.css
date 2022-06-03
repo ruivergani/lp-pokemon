@@ -998,6 +998,11 @@ footer .text p {
   height: 70.6rem;
   background-size: cover;
 }
+.s-area-slide-hero .slide-hero .swiper-slide.blue .main-area .text .image .pokeball {
+  position: relative;
+  left: 1.3rem;
+  top: -6.5rem;
+}
 .s-area-slide-hero .slide-hero .swiper-slide .main-area {
   background: url("../img/bg-red.svg") no-repeat center center;
   width: 100%;
