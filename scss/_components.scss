@@ -84,7 +84,8 @@
     filter: grayscale(100%);
     opacity: 0.6;
     transition: all .3s;
-    &:hover{
+    &:hover, 
+    &.active{
         filter: grayscale(0%);
         opacity: 1;
     }
@@ -100,6 +101,11 @@
         line-height: 150%;
     }  
     // for all tags variations of colors in the span
+    &.all{
+        span{
+            color: var(--blue-primary);
+        }
+    }   
     &.ghost{
         span{
             color: var(--type-ghost);
@@ -492,7 +498,6 @@
         }
     }
 }
-
 .modal{
     position: fixed;
     top: 0;

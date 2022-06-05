@@ -198,7 +198,7 @@ ul {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.type-filter:hover {
+.type-filter:hover, .type-filter.active {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
   opacity: 1;
@@ -220,6 +220,9 @@ ul {
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 150%;
+}
+.type-filter.all span {
+  color: var(--blue-primary);
 }
 .type-filter.ghost span {
   color: var(--type-ghost);
