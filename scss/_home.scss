@@ -147,3 +147,24 @@
         
     }
 }
+.s-all-info-pokemons{
+    position: relative;
+    padding-top: 11.9rem;
+    margin-top: -288px; // this is how you will put the section up (avoid the shadow of the slides)
+    z-index: 2000;
+    .container{
+        .top{
+            padding-bottom: 9.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                width: 100%;
+                max-width: 26.5rem;
+            }
+        }
+        .area-all{
+            
+        }
+    }
+}
