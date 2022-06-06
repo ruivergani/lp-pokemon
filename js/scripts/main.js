@@ -1,8 +1,6 @@
 // script open modal (remember is a lot of cards where you can open modal)
-
 const cardPokemon = document.querySelectorAll('.js-open-details-pokemon'); // all elements that have this class
 const closeButton = document.querySelector('.js-close-modal-details-pokemon'); // get close button modal
-
 // function to separate
 function openDetailsPokemon(){
   document.documentElement.classList.add('open-modal'); // add the class to the HTML document
@@ -10,11 +8,9 @@ function openDetailsPokemon(){
 function closeDetailsPokemon(){
   document.documentElement.classList.remove('open-modal'); // remove the class to the HTML document
 }
-
 cardPokemon.forEach(card => { // each card that you click
    card.addEventListener('click', openDetailsPokemon);
 });
-
 closeButton.addEventListener('click', closeDetailsPokemon);
 
 
@@ -26,3 +22,14 @@ var slide_hero = new Swiper(".slide-hero", {
     el: ".s-area-slide-hero .slide-hero .swiper-slide .main-area .area-explore .swiper-pagination",
   },
 });
+
+// Configure dropdown button to open
+const btnDropdownSelect = document.querySelector('.js-open-select-custom');
+const dropdownArea = document.querySelector('.select-custom');
+
+btnDropdownSelect.addEventListener('click', () => { // arrow function 
+  dropdownArea.classList.toggle('active');
+  // or could have done btnDropdownSelect.parentElement.classList.toggle('active);
+})
+
+

@@ -1394,6 +1394,13 @@ footer .text p {
     position: relative;
     margin-bottom: 5.5rem;
   }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom.active .item-selected {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom.active .dropdown-select {
+    opacity: 1;
+    pointer-events: all;
+  }
   .s-all-info-pokemons .container .area-all .right-container .select-custom .item-selected {
     cursor: pointer;
     width: 100%;
@@ -1430,6 +1437,10 @@ footer .text p {
     border-top: 0;
     padding: 21px;
     top: 5.6rem;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     overflow-y: auto;
   }
   .s-all-info-pokemons .container .area-all .right-container .select-custom .dropdown-select::-webkit-scrollbar-track {
