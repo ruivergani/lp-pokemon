@@ -66,8 +66,10 @@
                         width: 100%;
                         max-width: 79.8rem; // max width
                         margin: 0 auto;
+                        animation: floating 6s ease-in-out infinite; // could be forwards (not infinite);
                         .lights{
                             position: absolute;
+                            animation: none;
                             top: -50px;
                             left: 50%;
                             margin-left: -8.5rem; // largura da imagem divido por 2
@@ -286,4 +288,5 @@
             }
         }
     }
+
 }
