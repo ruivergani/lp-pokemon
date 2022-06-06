@@ -1143,7 +1143,7 @@ footer .text p {
   z-index: 2000;
 }
 .s-all-info-pokemons .container .top {
-  padding-bottom: 9.1rem;
+  padding-bottom: 7.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1157,4 +1157,62 @@ footer .text p {
 .s-all-info-pokemons .container .top h2 {
   width: 100%;
   max-width: 26.5rem;
+}
+.s-all-info-pokemons .container .top .search {
+  margin-top: 2.2rem;
+}
+.s-all-info-pokemons .container .area-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.s-all-info-pokemons .container .area-all .left-container {
+  border-right: 1px solid #EFF3F6;
+  width: 100%;
+  max-width: 32.9rem;
+  padding-top: 7.1rem;
+}
+.s-all-info-pokemons .container .area-all .left-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.s-all-info-pokemons .container .area-all .right-container {
+  padding-left: 7.5rem;
+  padding-bottom: 8.8rem;
+}
+.s-all-info-pokemons .container .area-all .right-container .top-container > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.7rem;
+  padding-top: 7rem;
+  padding-bottom: 6.3rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.s-all-info-pokemons .container .area-all .right-container .top-container > div span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #4D5053;
 }
