@@ -1135,8 +1135,34 @@ footer .text p {
   z-index: 0;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  .s-area-slide-hero {
+    height: 95.4rem;
+  }
+  .s-area-slide-hero .slide-hero .swiper-slide.blue .main-area .text h1 {
+    max-width: 38.5rem;
+    margin: 0 auto;
+    margin-top: 2.9rem;
+    margin-bottom: 0.8rem;
+  }
+  .s-area-slide-hero .slide-hero .swiper-slide:after {
+    height: 25rem;
+  }
+  .s-area-slide-hero .slide-hero .swiper-slide .main-area .area-explore {
+    display: none;
+  }
+  .s-area-slide-hero .slide-hero .swiper-slide .main-area .text .image {
+    margin-top: 8.2rem;
+  }
+}
+@media (max-width: 560px) {
+  .s-area-slide-hero {
+    overflow: hidden;
+  }
+}
 
 .s-all-info-pokemons {
+  display: none;
   position: relative;
   padding-top: 11.9rem;
   margin-top: -288px;

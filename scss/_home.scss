@@ -144,10 +144,47 @@
                 pointer-events: none;
             }
         }
+    
+    }
+    @media (max-width: 768px){
+        height: 95.4rem;
+        .slide-hero{
+            .swiper-slide{
+                &.blue{
+                    .main-area{
+                        .text{
+                            h1{
+                                max-width: 38.5rem;
+                                margin: 0 auto;
+                                margin-top: 2.9rem;
+                                margin-bottom: 0.8rem;
+                            }
+                        }
+                    }
+                }
+                &:after{
+                    height: 25rem; // white part
+                }
+                .main-area{
+                    .area-explore{
+                        display: none;
+                    }
+                    .text{
+                        .image{
+                            margin-top: 8.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 560px){
+        overflow: hidden;
         
     }
 }
 .s-all-info-pokemons{
+    display: none;
     position: relative;
     padding-top: 11.9rem;
     margin-top: -288px; // this is how you will put the section up (avoid the shadow of the slides)
