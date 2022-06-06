@@ -1192,6 +1192,7 @@ footer .text p {
   flex-direction: column;
 }
 .s-all-info-pokemons .container .area-all .right-container {
+  width: 100%;
   padding-left: 7.5rem;
   padding-bottom: 8.8rem;
 }
@@ -1215,4 +1216,14 @@ footer .text p {
   font-size: 18px;
   line-height: 150%;
   color: #4D5053;
+}
+.s-all-info-pokemons .container .area-all .right-container .all {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3.2rem;
+  margin-bottom: 6.8rem;
+}
+.s-all-info-pokemons .container .area-all .right-container .btn-load-more {
+  display: table;
+  margin: 0 auto;
 }

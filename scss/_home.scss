@@ -183,6 +183,7 @@
                 }
             }
             .right-container{
+                width: 100%;
                 padding-left: 7.5rem;
                 padding-bottom: 8.8rem;
                 .top-container{
@@ -204,7 +205,14 @@
                     
                 }
                 .all{
-                    
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr; // 3 equal collumns using grid
+                    grid-gap: 3.2rem;
+                    margin-bottom: 6.8rem;
+                }
+                .btn-load-more{
+                    display: table; // when you do not have height or width done
+                    margin: 0 auto;
                 }
             }
         }
