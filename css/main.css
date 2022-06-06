@@ -1420,6 +1420,35 @@ footer .text p {
     color: #7a7d80;
     font-weight: 600;
   }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .dropdown-select {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 22.3rem;
+    border: 1px solid #a0afba;
+    background-color: white;
+    border-top: 0;
+    padding: 21px;
+    top: 5.6rem;
+    overflow-y: auto;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .dropdown-select::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .dropdown-select::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .dropdown-select::-webkit-scrollbar-thumb {
+    background-color: #3d75c2;
+    border-radius: 0.5rem;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .dropdown-select li:first-child button {
+    padding-top: 0px;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .dropdown-select li button {
+    padding: 1.2rem;
+  }
   .s-all-info-pokemons .container .area-all .right-container .all {
     grid-template-columns: 1fr;
     grid-gap: 1.6rem;

@@ -392,6 +392,45 @@
                                 font-weight: 600;
                             }   
                         }
+                        .dropdown-select{
+                            position: absolute;
+                            z-index: 2;
+                            width: 100%;
+                            height: 22.3rem;
+                            border: 1px solid #a0afba;
+                            background-color: white;
+                            border-top: 0;
+                            padding: 21px;
+                            top: 5.6rem;
+                            // configuration for JS (open/close dropdown)
+                            // hide all elements which are not part of the dropdown
+                            overflow-y: auto; // barra the rolagem
+                            // customize the bar y
+                            &::-webkit-scrollbar-track{
+                                // the whole area
+                                background-color: transparent;
+                            }
+                            &::-webkit-scrollbar{
+                                width: 5px;
+                                background-color: transparent;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                // the scrollbar itself
+                                background-color: #3d75c2;
+                                border-radius: 0.5rem;
+        
+                            }
+                            li{
+                                &:first-child{
+                                    button{
+                                        padding-top: 0px;
+                                    }
+                                }
+                                button{
+                                    padding: 1.2rem;
+                                }
+                            }
+                        }
                     }
                     .all{
                         grid-template-columns: 1fr;
