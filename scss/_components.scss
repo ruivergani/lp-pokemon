@@ -692,8 +692,8 @@
             width: 100%;
             max-width: 19.1rem;
             height: 100%;
-            background-repeat: no-repeat;
-            background-position: center center;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
             .icon{
                 position: absolute;
                 width: 3.4rem;
@@ -849,6 +849,40 @@
                         }   
                     }
                 }
+            }
+        }
+    }
+    @media(max-width: 560px){
+        align-items: flex-end; // modal act like a tab
+        .box{
+            width: 100%;
+            height: 90%;
+            flex-direction: column;
+            border-radius: 0px;
+            .close{
+                top: -36px;
+                border-radius: 8px 8px 0 0;
+                width: 4.1rem;
+            }
+            .left-container{
+                max-width: 100%;
+                background-size: cover !important;
+                height: 12.5rem;
+                .image{
+                    max-width: 12rem;
+                    bottom: -3.1rem;
+                    left: 50%;
+                    margin-left: -6rem;
+                    height: 12.5rem;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover; // it will fit inside this image, the perfect mask as always
+                    }
+                }
+            }
+            .right-container{
+
             }
         }
     }
