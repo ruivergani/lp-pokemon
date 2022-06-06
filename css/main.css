@@ -1354,6 +1354,9 @@ footer .text p {
   }
 }
 @media (max-width: 560px) {
+  .s-all-info-pokemons {
+    margin-top: -34rem;
+  }
   .s-all-info-pokemons .container .top {
     margin-bottom: 1rem;
     -webkit-box-orient: vertical;
@@ -1370,12 +1373,17 @@ footer .text p {
   .s-all-info-pokemons .container .top h2 {
     max-width: 100%;
     margin: 0 auto;
+    font-size: 2.9rem;
     text-align: center;
+  }
+  .s-all-info-pokemons .container .top .search {
+    margin-top: 4.1rem;
   }
   .s-all-info-pokemons .container .area-all .left-container {
     display: none;
   }
   .s-all-info-pokemons .container .area-all .right-container {
+    padding-top: 2rem;
     padding-left: 0px;
   }
   .s-all-info-pokemons .container .area-all .right-container .all {
@@ -1383,5 +1391,6 @@ footer .text p {
     grid-gap: 1.6rem;
     margin: 0 auto;
     max-width: 86%;
+    margin-bottom: 4.8rem;
   }
 }
