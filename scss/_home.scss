@@ -162,7 +162,7 @@
                         }
                     }
                 }
-                &:after{
+                &::after{
                     height: 25rem; // white part
                 }
                 .main-area{
@@ -180,7 +180,39 @@
     }
     @media (max-width: 560px){
         overflow: hidden;
-        
+        height: 104.5rem;
+        .slide-hero{
+            .swiper-slide{
+                &.blue{
+                    .main-area{
+                        .text{
+                            h1{
+                                max-width: 25.4rem;
+                            }
+                        }
+                    }
+                }
+                &::after{
+                    height: 34rem; // white part
+                }
+                .main-area{
+                    padding-top: 12rem;
+                    h1{
+                        font-size: 4.8rem;
+                        line-height: 5.9rem;
+                    }
+                    .image{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            max-width: 72rem;
+                        }
+                    }
+                }
+            }
+            
+        }
     }
 }
 .s-all-info-pokemons{
