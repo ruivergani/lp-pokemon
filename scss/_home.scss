@@ -275,6 +275,9 @@
                     
                 }
                 // config for the dropdown
+                .select-custom{
+                    display: none; // hide normall view
+                }
                 .all{
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr; // 3 equal collumns using grid
@@ -353,7 +356,7 @@
                 .search{
                     margin-top: 4.1rem;
                 }
-            }
+            } 
             .area-all{
                 .left-container{
                     display: none;
@@ -361,6 +364,35 @@
                 .right-container{
                     padding-top: 2rem;
                     padding-left: 0px;
+                    // config for the dropdown
+                    .select-custom{
+                        display: block;
+                        position: relative;
+                        margin-bottom: 5.5rem;
+                        // main item 
+                        .item-selected{
+                            cursor: pointer;
+                            width: 100%;
+                            height: 5.6rem;
+                            border: 1px solid #a0afba;
+                            border-radius: 1rem;
+                            background: url("../img/arrow-down-select.svg") no-repeat right 2.4rem center; // position the arrow in the right side
+                            padding: 0 2rem;
+                            display: flex; 
+                            align-items: center;
+                            span{
+                                color: #7a7d80;
+                                opacity: 0.6;
+                                font-size: 1.4rem;
+                                margin-right: 0.4rem;
+                            }
+                            strong{
+                                font-size: 14px;
+                                color: #7a7d80;
+                                font-weight: 600;
+                            }   
+                        }
+                    }
                     .all{
                         grid-template-columns: 1fr;
                         grid-gap: 1.6rem;

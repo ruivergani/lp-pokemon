@@ -1308,6 +1308,9 @@ footer .text p {
   line-height: 150%;
   color: #4D5053;
 }
+.s-all-info-pokemons .container .area-all .right-container .select-custom {
+  display: none;
+}
 .s-all-info-pokemons .container .area-all .right-container .all {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1385,6 +1388,37 @@ footer .text p {
   .s-all-info-pokemons .container .area-all .right-container {
     padding-top: 2rem;
     padding-left: 0px;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom {
+    display: block;
+    position: relative;
+    margin-bottom: 5.5rem;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .item-selected {
+    cursor: pointer;
+    width: 100%;
+    height: 5.6rem;
+    border: 1px solid #a0afba;
+    border-radius: 1rem;
+    background: url("../img/arrow-down-select.svg") no-repeat right 2.4rem center;
+    padding: 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .item-selected span {
+    color: #7a7d80;
+    opacity: 0.6;
+    font-size: 1.4rem;
+    margin-right: 0.4rem;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .select-custom .item-selected strong {
+    font-size: 14px;
+    color: #7a7d80;
+    font-weight: 600;
   }
   .s-all-info-pokemons .container .area-all .right-container .all {
     grid-template-columns: 1fr;
