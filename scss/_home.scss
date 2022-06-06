@@ -218,7 +218,6 @@
     }
 }
 .s-all-info-pokemons{
-    display: none;
     position: relative;
     padding-top: 11.9rem;
     margin-top: -288px; // this is how you will put the section up (avoid the shadow of the slides)
@@ -287,6 +286,84 @@
                 }
             }
         }
-    }
 
+    }
+    // all responsive sizes
+    @media (max-width: 1200px){
+        .container{
+            .top{
+                .search{
+                    max-width: 32.3rem;
+                }
+            }
+            .area-all{
+                .left-container{
+                    max-width: 15.9rem;
+                    padding-top: 4rem;
+                }
+                .right-container{
+                    padding-top: 4rem;
+                    padding-left: 2.5rem;
+                    padding-bottom: 4rem;
+                    .top-container{
+                        & > div { // because there is no identifier in the div 
+                            padding-top: 0px;
+                        }
+                    }
+                    .all{
+                        grid-gap: 2rem;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 768px){
+        margin-top: -25.8rem;
+        .container{
+            .top{
+                margin-bottom: 4rem;
+            }
+            .area-all{
+                .left-container{
+                    display: none;
+                }
+                .right-container{
+                    padding-left: 0px;
+                }
+            }
+            
+        }
+    }
+    @media (max-width: 560px){
+        margin-top: 
+        .container{
+            .top{
+                margin-bottom: 1rem;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h2{
+                    max-width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+            .area-all{
+                .left-container{
+                    display: none;
+                }
+                .right-container{
+                    padding-left: 0px;
+                    .all{
+                        grid-template-columns: 1fr;
+                        grid-gap: 1.6rem;
+                        margin: 0 auto;
+                        max-width: 86%; // adjust the size of cards depending on the mobile phone
+                    }
+                }
+            }
+            
+        }
+    }
 }

@@ -377,6 +377,11 @@ ul {
   justify-content: center;
   margin-bottom: 1rem;
 }
+@media (max-width: 1200px) {
+  .card-pokemon {
+    max-width: 100%;
+  }
+}
 .card-pokemon.grass .image:after {
   background-color: rgba(114, 184, 97, 0.2);
 }
@@ -1223,7 +1228,6 @@ footer .text p {
 }
 
 .s-all-info-pokemons {
-  display: none;
   position: relative;
   padding-top: 11.9rem;
   margin-top: -288px;
@@ -1313,4 +1317,71 @@ footer .text p {
 .s-all-info-pokemons .container .area-all .right-container .btn-load-more {
   display: table;
   margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .s-all-info-pokemons .container .top .search {
+    max-width: 32.3rem;
+  }
+  .s-all-info-pokemons .container .area-all .left-container {
+    max-width: 15.9rem;
+    padding-top: 4rem;
+  }
+  .s-all-info-pokemons .container .area-all .right-container {
+    padding-top: 4rem;
+    padding-left: 2.5rem;
+    padding-bottom: 4rem;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .top-container > div {
+    padding-top: 0px;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .all {
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .s-all-info-pokemons {
+    margin-top: -25.8rem;
+  }
+  .s-all-info-pokemons .container .top {
+    margin-bottom: 4rem;
+  }
+  .s-all-info-pokemons .container .area-all .left-container {
+    display: none;
+  }
+  .s-all-info-pokemons .container .area-all .right-container {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 560px) {
+  .s-all-info-pokemons .container .top {
+    margin-bottom: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .s-all-info-pokemons .container .top h2 {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .s-all-info-pokemons .container .area-all .left-container {
+    display: none;
+  }
+  .s-all-info-pokemons .container .area-all .right-container {
+    padding-left: 0px;
+  }
+  .s-all-info-pokemons .container .area-all .right-container .all {
+    grid-template-columns: 1fr;
+    grid-gap: 1.6rem;
+    margin: 0 auto;
+    max-width: 86%;
+  }
 }
