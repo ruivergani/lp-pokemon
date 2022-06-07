@@ -861,7 +861,7 @@
             border-radius: 0px;
             .close{
                 top: -36px;
-                border-radius: 8px 8px 0 0;
+                border-radius: 0.8rem 0.8rem 0 0;
                 width: 4.1rem;
             }
             .left-container{
@@ -882,7 +882,63 @@
                 }
             }
             .right-container{
-
+                padding: 4rem 2.4rem;
+                .name{
+                    margin-top: 2.3rem;
+                    justify-content: center;
+                }
+                .type{
+                    justify-content: center;
+                }
+                .info{
+                    justify-content: center;
+                    gap: 2rem;
+                    align-items: center;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.8rem;
+                    }
+                }
+                .weak{
+                    h4{
+                        text-align: center;
+                    }
+                    ul{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        li{
+                            margin: 0px;
+                            padding: 0;
+                            .tag-type{
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .stats{
+                    margin-top: 3.2rem;
+                    h5{
+                        text-align: center;
+                    }
+                    .all{
+                        .item{
+                            .bar-status{
+                                max-width: 75%;
+                                .separator{
+                                    li{
+                                        &:not(:first-child){
+                                            margin-left: 19%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
             }
         }
     }

@@ -892,7 +892,7 @@ ul {
   }
   .modal .box .close {
     top: -36px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0.8rem 0.8rem 0 0;
     width: 4.1rem;
   }
   .modal .box .left-container {
@@ -912,6 +912,68 @@ ul {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+  }
+  .modal .box .right-container {
+    padding: 4rem 2.4rem;
+  }
+  .modal .box .right-container .name {
+    margin-top: 2.3rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .modal .box .right-container .type {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .modal .box .right-container .info {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .modal .box .right-container .info li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  .modal .box .right-container .weak h4 {
+    text-align: center;
+  }
+  .modal .box .right-container .weak ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .modal .box .right-container .weak ul li {
+    margin: 0px;
+    padding: 0;
+  }
+  .modal .box .right-container .weak ul li .tag-type {
+    width: 100%;
+    text-align: center;
+  }
+  .modal .box .right-container .stats {
+    margin-top: 3.2rem;
+  }
+  .modal .box .right-container .stats h5 {
+    text-align: center;
+  }
+  .modal .box .right-container .stats .all .item .bar-status {
+    max-width: 75%;
+  }
+  .modal .box .right-container .stats .all .item .bar-status .separator li:not(:first-child) {
+    margin-left: 19%;
   }
 }
 
