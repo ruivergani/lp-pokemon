@@ -36,17 +36,38 @@ btnDropdownSelect.addEventListener('click', () => { // arrow function
 
 // Function to list all pokemons
 function listingPokemons(urlApi){ // url from API
-    // using axios (same as fetch)
+    // 1 - Get all pokemons from the API (0 - 9)
+    // 2 - Pass results, next, count as parameter
+    // 3 - Go through the each pokemon API (array) to get the details from each pokemon
+  
     axios({
       method: 'GET', 
       url: urlApi
     })
-    .then((response) => {
+    .then((response) => { // succeed response will do the below config: 
       // all variables:
       const countPokemons = document.getElementById('js-count-pokemons');
-      // this is the response of the API
-      const {results, next, count} = response.data; // response.data.results; // going through the Object
+      // results = all pokemons
+      // count = sum of all pokemons
+      // next = next pagination of pokemons (0 - 9)
+      const {results, next, count} = response.data; // simple way of running through the OBJECT instead of using always response.data.results
       countPokemons.innerText = count; // innerText = count (all pokemons in the API)
+
+      // Array of results (pokemons)
+      results.forEach(pokemon => {
+        let urlApiDetails = pokemon.url; // get URL from each pokemon
+        axios({
+          method: 'GET', 
+          url: `${urlApiDetails}` //string
+        })
+        .then((response) => {
+          const {name, id, sprites, types} = response.data; 
+          // name = nome pokemon
+          // id = id pokemon
+          // sprites = image of pokemon
+          // types = tipo do pokemon
+        })
+      })
     })
 }
 
