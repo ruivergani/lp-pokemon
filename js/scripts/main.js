@@ -66,6 +66,16 @@ function listingPokemons(urlApi){ // url from API
           // id = id pokemon
           // sprites = image of pokemon
           // types = tipo do pokemon
+
+          // Object to get only information I need
+          const infoCard = {
+            nome: name,
+            code: id, 
+            image: sprites.other.dream_world.front_default, // path of the image
+            type: types[0].type.name // always first position
+          }
+          console.log(infoCard);
+          
         })
       })
     })
