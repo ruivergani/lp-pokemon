@@ -146,6 +146,7 @@ function closeDetailsPokemon() {
 
 // Left container - List all pokemons
 const areaType = document.getElementById('js-type-area');
+const areaTypeMobile = document.querySelector('.dropdown-select');
 
 axios({
     method: 'GET', 
@@ -175,6 +176,26 @@ axios({
             let spanText = document.createElement('span');
             spanText.textContent = `${capitalizeFirstLetter(type.name)}`; // same as innerText
             itemBtn.appendChild(spanText);
+
+            // Create element for dropdown mobile
+            let itemTypeMobile = document.createElement('li');
+            areaTypeMobile.appendChild(itemTypeMobile);
+
+            let itemBtnMobile = document.createElement('button');
+            itemBtnMobile.classList = `type-filter ${type.name}`; //tipo do pokemon
+            itemTypeMobile.appendChild(itemBtnMobile);
+
+            let iconMobile = document.createElement('icon');
+            iconMobile.classList = 'icon';
+            itemBtnMobile.appendChild(iconMobile);
+
+            let imgIconMobile = document.createElement('img');
+            imgIconMobile.setAttribute('src', `img/icon-types/${type.name}.svg`);
+            iconMobile.appendChild(imgIconMobile);
+
+            let spanTextMobile = document.createElement('span');
+            spanTextMobile.textContent = `${capitalizeFirstLetter(type.name)}`; // same as innerText
+            itemBtnMobile.appendChild(spanTextMobile);
         }
         else{
             console.log('Item not created.')
