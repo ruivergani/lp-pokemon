@@ -163,6 +163,7 @@ axios({
 
             let itemBtn = document.createElement('button');
             itemBtn.classList = `type-filter ${type.name}`; //tipo do pokemon
+            itemBtn.setAttribute('code-type', index + 1); // set this attribute so I can filter later the code type of each pokemon (position: 1)
             itemType.appendChild(itemBtn);
 
             let icon = document.createElement('icon');
@@ -183,6 +184,7 @@ axios({
 
             let itemBtnMobile = document.createElement('button');
             itemBtnMobile.classList = `type-filter ${type.name}`; //tipo do pokemon
+            itemBtnMobile.setAttribute('code-type', index + 1);
             itemTypeMobile.appendChild(itemBtnMobile);
 
             let iconMobile = document.createElement('icon');
@@ -196,6 +198,12 @@ axios({
             let spanTextMobile = document.createElement('span');
             spanTextMobile.textContent = `${capitalizeFirstLetter(type.name)}`; // same as innerText
             itemBtnMobile.appendChild(spanTextMobile);
+
+            // select all types from the ul list
+            const allTypes = document.querySelectorAll('.type-filter');
+            allTypes.forEach(btn => {
+                btn.addEventListener('click', filterByTypes); // when click you need to filter the pokemons
+            })
         }
         else{
             console.log('Item not created.')
@@ -212,3 +220,26 @@ function showMorePokemon(){
     countPagination = countPagination + 9;
 }
 btnLoadMore.addEventListener('click', showMorePokemon);
+
+
+// Function to filter all pokemons based on type
+function filterByTypes(){
+    // 1. Get ID from each type
+    // 2. Get the correct API from type
+
+    let idType = this.getAttribute('code-type'); //represents the index for each item on the list
+
+    const allTypes = document.querySelectorAll('.type-filter');
+    allTypes.forEach(item => {
+        item.classList.remove('active'); //remove all active from types (everytime you click it will be removed first)
+    })
+    this.classList.add('active');
+
+    // axios({
+    //     method: 'GET',
+    //     url: `https://pokeapi.co/api/v2/type/${idType}`
+    // })
+    // .then(response => {
+    //     console.log(response.data.pokemon)
+    // })
+}
