@@ -42,7 +42,11 @@ function listingPokemons(urlApi){ // url from API
       url: urlApi
     })
     .then((response) => {
-      console.log(response)
+      // all variables:
+      const countPokemons = document.getElementById('js-count-pokemons');
+      // this is the response of the API
+      const {results, next, count} = response.data; // response.data.results; // going through the Object
+      countPokemons.innerText = count; // innerText = count (all pokemons in the API)
     })
 }
 
