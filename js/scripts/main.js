@@ -202,3 +202,13 @@ axios({
         }
     })
 })
+
+// Load more button functionality
+const btnLoadMore = document.getElementById('js-btn-load-more');
+let countPagination = 10; // start from pokemon position 10 until - 
+
+function showMorePokemon(){
+    listingPokemons(`https://pokeapi.co/api/v2/pokemon?limit=9&offset=${countPagination}`); // basically you implement as load more (keep the existing ones)
+    countPagination = countPagination + 9;
+}
+btnLoadMore.addEventListener('click', showMorePokemon);
