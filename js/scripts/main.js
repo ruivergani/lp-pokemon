@@ -228,18 +228,28 @@ function filterByTypes(){
     // 2. Get the correct API from type
 
     let idType = this.getAttribute('code-type'); //represents the index for each item on the list
-
+    
+    const areaPokemons = document.getElementById('js-list-pokemons');
+    const btnLoadMore = document.getElementById('js-btn-load-more');
     const allTypes = document.querySelectorAll('.type-filter');
+    const countPokemons = document.getElementById('js-count-pokemons');
+
+    // clear all pokemons area when clicked
+    areaPokemons.innerHTML = "";
+    btnLoadMore.style.display = "none";
+
     allTypes.forEach(item => {
         item.classList.remove('active'); //remove all active from types (everytime you click it will be removed first)
     })
     this.classList.add('active');
 
-    // axios({
-    //     method: 'GET',
-    //     url: `https://pokeapi.co/api/v2/type/${idType}`
-    // })
-    // .then(response => {
-    //     console.log(response.data.pokemon)
-    // })
+    axios({
+        method: 'GET',
+        url: `https://pokeapi.co/api/v2/type/${idType}`
+    })
+    .then(response => {
+        const {pokemon} = response.data; // take out structure of the object
+        countPokemons.innerText = pokemon.length; // get the length of the pokemon API (size of it) = change number on top container
+        
+    })
 }
