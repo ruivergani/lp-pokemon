@@ -142,3 +142,42 @@ function openDetailsPokemon() {
 function closeDetailsPokemon() {
     document.documentElement.classList.remove('open-modal'); // remove the class to the HTML document
 }
+
+
+// Left container - List all pokemons
+const areaType = document.getElementById('js-type-area');
+
+axios({
+    method: 'GET', 
+    url: 'https://pokeapi.co/api/v2/type' // get all types of pokemons (19 total)
+})
+.then((response) => {
+    const {results} = response.data
+    results.forEach((type, index) => {
+
+        if(index < 18){ // avoid index 18
+            // Create element left-container
+            let itemType = document.createElement('li');
+            areaType.appendChild(itemType);
+
+            let itemBtn = document.createElement('button');
+            itemBtn.classList = `type-filter ${type.name}`; //tipo do pokemon
+            itemType.appendChild(itemBtn);
+
+            let icon = document.createElement('icon');
+            icon.classList = 'icon';
+            itemBtn.appendChild(icon);
+
+            let imgIcon = document.createElement('img');
+            imgIcon.setAttribute('src', `img/icon-types/${type.name}.svg`);
+            icon.appendChild(imgIcon);
+
+            let spanText = document.createElement('span');
+            spanText.textContent = `${capitalizeFirstLetter(type.name)}`;
+            itemBtn.appendChild(spanText);
+        }
+        else{
+            console.log('Item not created.')
+        }
+    })
+})
