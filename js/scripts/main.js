@@ -1,14 +1,7 @@
 // script open modal (remember is a lot of cards where you can open modal)
 const cardPokemon = document.querySelectorAll('.js-open-details-pokemon'); // all elements that have this class
 const closeButton = document.querySelector('.js-close-modal-details-pokemon'); // get close button modal
-// function to separate
-function openDetailsPokemon() {
-    document.documentElement.classList.add('open-modal'); // add the class to the HTML document
-}
-
-function closeDetailsPokemon() {
-    document.documentElement.classList.remove('open-modal'); // remove the class to the HTML document
-}
+// function to separate in the end of document 
 cardPokemon.forEach(card => { // each card that you click
     card.addEventListener('click', openDetailsPokemon);
 });
@@ -126,7 +119,12 @@ function listingPokemons(urlApi) { // url from API
                             type: types[0].type.name // always first position
                         }
                         createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image);
-
+                        
+                        // select all pokemons to open modal
+                        const cardPokemon = document.querySelectorAll('.js-open-details-pokemon'); // class
+                        cardPokemon.forEach(card => {
+                            card.addEventListener('click', openDetailsPokemon);
+                        })
                     })
             })
         })
@@ -135,7 +133,12 @@ function listingPokemons(urlApi) { // url from API
 // load page => load function
 listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0')
 
-
-
-
 // API para listar pokemon: https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0 (limit per page - offset is start from)
+
+function openDetailsPokemon() {
+    document.documentElement.classList.add('open-modal'); // add the class to the HTML document
+}
+
+function closeDetailsPokemon() {
+    document.documentElement.classList.remove('open-modal'); // remove the class to the HTML document
+}
