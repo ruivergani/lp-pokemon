@@ -173,7 +173,7 @@ axios({
             icon.appendChild(imgIcon);
 
             let spanText = document.createElement('span');
-            spanText.textContent = `${capitalizeFirstLetter(type.name)}`;
+            spanText.textContent = `${capitalizeFirstLetter(type.name)}`; // same as innerText
             itemBtn.appendChild(spanText);
         }
         else{

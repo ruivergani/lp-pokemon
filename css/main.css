@@ -1382,6 +1382,7 @@ footer .text p {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 .s-all-info-pokemons .container .area-all .right-container {
   width: 100%;
