@@ -118,7 +118,7 @@ function listingPokemons(urlApi) { // url from API
                             image: sprites.other.dream_world.front_default, // path of the image
                             type: types[0].type.name // always first position
                         }
-                        createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image);
+                        createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image); // ** CALLING FUNCTION
                         
                         // select all pokemons to open modal
                         const cardPokemon = document.querySelectorAll('.js-open-details-pokemon'); // class
@@ -131,7 +131,7 @@ function listingPokemons(urlApi) { // url from API
 }
 
 // load page => load function
-listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0')
+listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0') // ** CALLING FUNCTION 
 
 // API para listar pokemon: https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0 (limit per page - offset is start from)
 
@@ -211,7 +211,7 @@ axios({
     })
 })
 
-// Load more button functionality
+// LOAD MORE Button functionality
 const btnLoadMore = document.getElementById('js-btn-load-more');
 let countPagination = 10; // start from pokemon position 10 until - 
 
@@ -227,8 +227,8 @@ function filterByTypes(){
     // 1. Get ID from each type
     // 2. Get the correct API from type
 
-    let idType = this.getAttribute('code-type'); //represents the index for each item on the list
-    
+    // all variables needed
+    let idType = this.getAttribute('code-type'); 
     const areaPokemons = document.getElementById('js-list-pokemons');
     const btnLoadMore = document.getElementById('js-btn-load-more');
     const allTypes = document.querySelectorAll('.type-filter');
@@ -238,11 +238,21 @@ function filterByTypes(){
     areaPokemons.innerHTML = "";
     btnLoadMore.style.display = "none";
 
+    // scroll top section when clicked
+    const sectionPokemons = document.querySelector('.s-all-info-pokemons');
+    const topSection = sectionPokemons.offsetTop;
+    window.scrollTo({
+        top: topSection + 288, 
+        behavior: 'smooth'
+    })
+
+    // add and remove active from li
     allTypes.forEach(item => {
         item.classList.remove('active'); //remove all active from types (everytime you click it will be removed first)
     })
     this.classList.add('active');
 
+    // perform filtering of pokemons
     axios({
         method: 'GET',
         url: `https://pokeapi.co/api/v2/type/${idType}`
