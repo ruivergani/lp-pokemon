@@ -305,3 +305,43 @@ function filterByTypes(){
     
 }
 
+// SEARCH INPUT SECTION
+const inputSearch = document.getElementById('js-input-search');
+const btnSearch = document.getElementById('js-btn-search');
+
+btnSearch.addEventListener('click', searchPokemon);
+
+// code in case the user press enter (instead of button)
+inputSearch.addEventListener('keyup', (event) => {
+    if(event.code === 'Enter'){ 
+        searchPokemon(); // CALL FUNCTION
+    }
+})
+
+function searchPokemon(){
+    let valueInput = inputSearch.value.toLowerCase(); // value of the input to LowerCase (required by API)
+    const countPokemons = document.getElementById('js-count-pokemons');
+    axios({
+        method: 'GET', 
+        url: `https://pokeapi.co/api/v2/pokemon/${valueInput}`
+    })
+    .then(response => {
+        areaPokemonsList.innerHTML = "";
+        btnLoadMore.style.display = 'none';
+        countPokemons.textContent = 1;
+        const { name, id, sprites, types } = response.data;
+        const infoCard = {
+          nome: name,
+          code: id,
+          image: sprites.other.dream_world.front_default,
+          type: types[0].type.name
+        }
+        if(infoCard.image) {
+          createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image);
+        }
+        const cardPokemon = document.querySelectorAll('.js-open-details-pokemon');
+        cardPokemon.forEach(card => {
+          card.addEventListener('click', openDetailsPokemon);
+        })
+    })
+}
