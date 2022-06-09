@@ -249,7 +249,35 @@ function filterByTypes(){
     })
     .then(response => {
         const {pokemon} = response.data; // take out structure of the object
-        countPokemons.innerText = pokemon.length; // get the length of the pokemon API (size of it) = change number on top container
-        
+        countPokemons.innerText = pokemon.length; // get the length of each array from the pokemon API (size of it) = change number on top container
+
+        pokemon.forEach(item => {
+            const {url} = item.pokemon; // URL from each pokemon
+
+            axios({
+                method: 'GET',
+                url: `${url}`
+            })
+            .then(response => {
+                 const { name, id, sprites, types } = response.data;
+
+                // Object to get only information I need
+                const infoCard = {
+                    nome: name,
+                    code: id,
+                    image: sprites.other.dream_world.front_default, // path of the image
+                    type: types[0].type.name // always first position
+                }
+
+                createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image);
+                        
+                // select all pokemons to open modal
+                const cardPokemon = document.querySelectorAll('.js-open-details-pokemon'); // class
+                cardPokemon.forEach(card => {
+                    card.addEventListener('click', openDetailsPokemon);
+                })
+            })
+
+        })
     })
 }
