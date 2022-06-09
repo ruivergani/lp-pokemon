@@ -26,6 +26,8 @@ btnDropdownSelect.addEventListener('click', () => { // arrow function
     // or could have done btnDropdownSelect.parentElement.classList.toggle('active);
 })
 
+//******  THE POKEMON API CODING  *******/
+
 // basically the API has different URL for listing or filtering or doing other activities with the pokemons, that is the reason you use the parameter URL in the listing of Pokemons
 
 function capitalizeFirstLetter(string) {
@@ -34,7 +36,7 @@ function capitalizeFirstLetter(string) {
 
 const areaPokemonsList = document.getElementById('js-list-pokemons'); // mapear area onde pokemons irao ficar para fazer o append
 
-// Function to create card HTML to JS
+// CREATE CARD POKEMON (JS)
 function createCardPokemon(code, type, nome, imagePok) {
     // Card Element
     let card = document.createElement('button');
@@ -78,13 +80,13 @@ function createCardPokemon(code, type, nome, imagePok) {
     icon.appendChild(typeImg);
 }
 
-// Function to list all pokemons
+// LIST THE POKEMONS
 function listingPokemons(urlApi) { // url from API
     // 1 - Get all pokemons from the API (0 - 9)
     // 2 - Pass results, next, count as parameter
     // 3 - Go through the each pokemon API (array) to get the details from each pokemon
 
-    axios({
+        axios({
             method: 'GET',
             url: urlApi
         })
@@ -143,8 +145,7 @@ function closeDetailsPokemon() {
     document.documentElement.classList.remove('open-modal'); // remove the class to the HTML document
 }
 
-
-// Left container - List all pokemons
+// LIST ALL TYPES UL LI
 const areaType = document.getElementById('js-type-area');
 const areaTypeMobile = document.querySelector('.dropdown-select');
 
@@ -211,7 +212,7 @@ axios({
     })
 })
 
-// LOAD MORE Button functionality
+// LOAD MORE BUTTON
 const btnLoadMore = document.getElementById('js-btn-load-more');
 let countPagination = 10; // start from pokemon position 10 until - 
 
@@ -221,8 +222,7 @@ function showMorePokemon(){
 }
 btnLoadMore.addEventListener('click', showMorePokemon);
 
-
-// Function to filter all pokemons based on type
+// FILTER ALL POKEMONS
 function filterByTypes(){
     // 1. Get ID from each type
     // 2. Get the correct API from type
@@ -304,3 +304,4 @@ function filterByTypes(){
 
     
 }
+
