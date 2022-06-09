@@ -268,8 +268,10 @@ function filterByTypes(){
                     image: sprites.other.dream_world.front_default, // path of the image
                     type: types[0].type.name // always first position
                 }
-
-                createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image);
+                // pokemons without image do not show
+                if(infoCard.image){
+                    createCardPokemon(infoCard.code, infoCard.type, infoCard.nome, infoCard.image);
+                }
                         
                 // select all pokemons to open modal
                 const cardPokemon = document.querySelectorAll('.js-open-details-pokemon'); // class
