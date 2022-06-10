@@ -209,7 +209,34 @@ function openDetailsPokemon() {
         weightPokemonModal.textContent = (infoPokemon.weight / 10) + `kg`;
         mainAbilitiesPokemonModal.textContent = infoPokemon.mainAbilities;
 
+        // LISTING WEAKNESSES POKEMON
+        function listingWeaknesses(){
+            const ulWeak = document.getElementById('js-area-weak');
+            ulWeak.innerHTML = "";
+
+            // Go to API with type clicked
+            axios({
+                method: 'GET', 
+                url: `${infoPokemon.urlType}` // weaknessess from this URL
+            })
+            .then(response => {
+                let weaknessess = response.data.damage_relations.double_damage_from; // return weaknessess
+
+                weaknessess.forEach(item => {
+                    // create Li
+                    let itemListWeak = document.createElement('li');
+                    ulWeak.appendChild(itemListWeak); // add to ul
+
+                    // create Span
+                    let spanList = document.createElement('span');
+                    spanList.classList = `tag-type ${item.name}`;
+                    spanList.textContent =  capitalizeFirstLetter(item.name);
+                    itemListWeak.appendChild(spanList); // add to list
+                })
+            })
+        }
         listingTypesPokemon(); // *** CALL FUNCTION HERE
+        listingWeaknesses(); // *** CALL FUNCTION HERE
     })
 }
 
