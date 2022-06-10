@@ -321,6 +321,12 @@ inputSearch.addEventListener('keyup', (event) => {
 function searchPokemon(){
     let valueInput = inputSearch.value.toLowerCase(); // value of the input to LowerCase (required by API)
     const countPokemons = document.getElementById('js-count-pokemons');
+    const typeFilter = document.querySelectorAll('.type-filter');
+    // take out active from the searched pokemon (ul li)
+    typeFilter.forEach(type => {
+        type.classList.remove('active');
+    })
+
     axios({
         method: 'GET', 
         url: `https://pokeapi.co/api/v2/pokemon/${valueInput}`
