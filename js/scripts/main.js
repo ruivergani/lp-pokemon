@@ -164,6 +164,12 @@ function openDetailsPokemon() {
     const codePokemonModal = document.getElementById('js-code-pokemon-modal');
     codePokemonModal.textContent = (codePokemon < 10) ? `#00${codePokemon}` : (codePokemon < 100) ? `#0${codePokemon}` : `#${codePokemon}`;
 
+    const heightPokemonModal = document.getElementById('js-height-pokemon');
+
+    const weightPokemonModal = document.getElementById('js-weight-pokemon');
+
+    const mainAbilitiesPokemonModal = document.getElementById('js-main-abilities');
+
 
     axios({
         method: 'GET', 
@@ -183,7 +189,6 @@ function openDetailsPokemon() {
         // LISTING TYPES OF POKEMON
         function listingTypesPokemon(){
             let arrayTypes = infoPokemon.types; //array of types
-
             // create UL
             const ulTypesModal = document.getElementById('js-types-pokemon');
             ulTypesModal.innerHTML = "";
@@ -196,10 +201,14 @@ function openDetailsPokemon() {
                 // create Span
                 let spanList = document.createElement('span');
                 spanList.classList = `tag-type ${item.type.name}`;
-                spanList.textContent = item.type.name;
+                spanList.textContent =  capitalizeFirstLetter(item.type.name);
                 itemList.appendChild(spanList); // add to list
             })
         }
+        heightPokemonModal.textContent = (infoPokemon.height / 10) + `m`;
+        weightPokemonModal.textContent = (infoPokemon.weight / 10) + `kg`;
+        mainAbilitiesPokemonModal.textContent = infoPokemon.mainAbilities;
+
         listingTypesPokemon(); // *** CALL FUNCTION HERE
     })
 }
