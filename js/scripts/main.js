@@ -344,4 +344,12 @@ function searchPokemon(){
           card.addEventListener('click', openDetailsPokemon);
         })
     })
+    .catch((error) => {
+        if(error.response){
+            areaPokemonsList.innerHTML = "";
+            btnLoadMore.style.display = 'none';
+            countPokemons.textContent = 0;
+            alert('Not found any result from this search.');
+        }
+    })
 }
