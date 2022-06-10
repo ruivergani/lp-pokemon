@@ -149,6 +149,9 @@ function openDetailsPokemon() {
     // Modal variables
     const imgPokemonModal = document.getElementById('js-image-pokemon-modal');
     imgPokemonModal.setAttribute('src', imagePokemon.getAttribute('src')); // substitute src
+
+    const pokemonModal = document.getElementById('js-modal-details');
+    pokemonModal.setAttribute('type-pokemon-modal', this.classList[2]); // get from the array position (classes) the last class
     
     axios({
         method: 'GET', 
