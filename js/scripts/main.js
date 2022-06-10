@@ -235,10 +235,23 @@ function openDetailsPokemon() {
 
         // LISTING STATS
         const statsHp = document.getElementById('js-stats-hp');
+        statsHp.style.width = `${infoPokemon.stats[0].base_stat}%`;
+
+        const statsAttack = document.getElementById('js-stats-attack');
+        statsAttack.style.width = `${infoPokemon.stats[1].base_stat}%`;
+
+        const statsDefense = document.getElementById('js-stats-defense');
+        statsDefense.style.width = `${infoPokemon.stats[2].base_stat}%`;
+
+        const statsAttackSp = document.getElementById('js-stats-sp-attack');
+        statsAttackSp.style.width = `${infoPokemon.stats[3].base_stat}%`;
+
+        const statsDefenseSp = document.getElementById('js-stats-sp-defense');
+        statsDefenseSp.style.width = `${infoPokemon.stats[4].base_stat}%`;
         
-        // infoPokemon.stats[0].base_stat;
-
-
+        const statsSpeed = document.getElementById('js-stats-speed');
+        statsSpeed.style.width = `${infoPokemon.stats[5].base_stat}%`;
+        
         listingTypesPokemon(); // *** CALL FUNCTION HERE
         listingWeaknesses(); // *** CALL FUNCTION HERE
     })
