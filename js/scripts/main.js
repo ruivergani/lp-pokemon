@@ -165,11 +165,8 @@ function openDetailsPokemon() {
     codePokemonModal.textContent = (codePokemon < 10) ? `#00${codePokemon}` : (codePokemon < 100) ? `#0${codePokemon}` : `#${codePokemon}`;
 
     const heightPokemonModal = document.getElementById('js-height-pokemon');
-
     const weightPokemonModal = document.getElementById('js-weight-pokemon');
-
     const mainAbilitiesPokemonModal = document.getElementById('js-main-abilities');
-
 
     axios({
         method: 'GET', 
@@ -235,6 +232,13 @@ function openDetailsPokemon() {
                 })
             })
         }
+
+        // LISTING STATS
+        const statsHp = document.getElementById('js-stats-hp');
+        
+        // infoPokemon.stats[0].base_stat;
+
+
         listingTypesPokemon(); // *** CALL FUNCTION HERE
         listingWeaknesses(); // *** CALL FUNCTION HERE
     })
