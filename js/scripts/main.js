@@ -41,6 +41,7 @@ function createCardPokemon(code, type, nome, imagePok) {
     // Card Element
     let card = document.createElement('button');
     card.classList = `card-pokemon js-open-details-pokemon ${type}`;
+    card.setAttribute('code-pokemon', code); // atributo para codigo do pokemon (link modal)
     areaPokemonsList.appendChild(card); // append all cards
 
     // Div Image
@@ -139,6 +140,16 @@ listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0'); // ** CAL
 
 function openDetailsPokemon() {
     document.documentElement.classList.add('open-modal'); // add the class to the HTML document
+
+    let codePokemon = this.getAttribute('code-pokemon'); // get the code from each pokemon
+    
+    axios({
+        method: 'GET', 
+        url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}` // detalhes respectivo pokemon
+    })
+    .then(response => {
+        console.log(response.data);
+    })
 }
 
 function closeDetailsPokemon() {
