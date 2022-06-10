@@ -51,6 +51,7 @@ function createCardPokemon(code, type, nome, imagePok) {
 
     let imageSrc = document.createElement('img');
     imageSrc.setAttribute('src', imagePok); // set attribute to imagePok (parameter)
+    imageSrc.className = 'thumb-img';
     image.appendChild(imageSrc);
 
     // Div Info
@@ -138,20 +139,27 @@ listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0'); // ** CAL
 
 // API para listar pokemon: https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0 (limit per page - offset is start from)
 
+// FUNCTION OPEN MODAL DETAILS POKEMON
 function openDetailsPokemon() {
     document.documentElement.classList.add('open-modal'); // add the class to the HTML document
 
     let codePokemon = this.getAttribute('code-pokemon'); // get the code from each pokemon
+    let imagePokemon = this.querySelector('.thumb-img'); // get image from pokemon clicked
+    
+    // Modal variables
+    const imgPokemonModal = document.getElementById('js-image-pokemon-modal');
+    imgPokemonModal.setAttribute('src', imagePokemon.getAttribute('src')); // substitute src
     
     axios({
         method: 'GET', 
         url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}` // detalhes respectivo pokemon
     })
     .then(response => {
-        console.log(response.data);
+        
     })
 }
 
+// CLOSE MODAL DETAILS POKEMON
 function closeDetailsPokemon() {
     document.documentElement.classList.remove('open-modal'); // remove the class to the HTML document
 }
