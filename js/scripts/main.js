@@ -146,6 +146,7 @@ function openDetailsPokemon() {
     let codePokemon = this.getAttribute('code-pokemon'); // get the code from each pokemon
     let imagePokemon = this.querySelector('.thumb-img'); // get image from pokemon clicked
     let iconPokemon = this.querySelector('.info .icon img'); // get icon from pokemon card clicked
+    let namePokemon = this.querySelector('h3');
     
     // Modal variables
     const imgPokemonModal = document.getElementById('js-image-pokemon-modal');
@@ -154,9 +155,15 @@ function openDetailsPokemon() {
     const pokemonModal = document.getElementById('js-modal-details');
     pokemonModal.setAttribute('type-pokemon-modal', this.classList[2]); // get from the array position (classes) the last class
 
-    let iconTypePokemonModal = document.getElementById('js-image-type-modal');
+    const iconTypePokemonModal = document.getElementById('js-image-type-modal');
     iconTypePokemonModal.setAttribute('src', iconPokemon.getAttribute('src'));
-    
+
+    const namePokemonModal = document.getElementById('js-name-pokemon-modal');
+    namePokemonModal.textContent = namePokemon.innerText;
+
+    const codePokemonModal = document.getElementById('js-code-pokemon-modal');
+    codePokemonModal.textContent = (codePokemon < 10) ? `#00${codePokemon}` : (codePokemon < 100) ? `#0${codePokemon}` : `#${codePokemon}`;
+
     // axios({
     //     method: 'GET', 
     //     url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}` // detalhes respectivo pokemon
