@@ -164,13 +164,44 @@ function openDetailsPokemon() {
     const codePokemonModal = document.getElementById('js-code-pokemon-modal');
     codePokemonModal.textContent = (codePokemon < 10) ? `#00${codePokemon}` : (codePokemon < 100) ? `#0${codePokemon}` : `#${codePokemon}`;
 
-    // axios({
-    //     method: 'GET', 
-    //     url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}` // detalhes respectivo pokemon
-    // })
-    // .then(response => {
-        
-    // })
+
+    axios({
+        method: 'GET', 
+        url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}` // detalhes respectivo pokemon
+    })
+    .then(response => {
+        let data = response.data; // array with all pokemon info
+        let infoPokemon = {
+            mainAbilities: capitalizeFirstLetter(data.abilities[0].ability.name), // path to get ability
+            types: data.types, // from API array pokemon
+            weight: data.weight,
+            height: data.height,
+            abilities: data.abilities,
+            stats: data.stats,
+            urlType: data.types[0].type.url // to get the weakness from another API
+        }
+        // LISTING TYPES OF POKEMON
+        function listingTypesPokemon(){
+            let arrayTypes = infoPokemon.types; //array of types
+
+            // create UL
+            const ulTypesModal = document.getElementById('js-types-pokemon');
+            ulTypesModal.innerHTML = "";
+
+            arrayTypes.forEach(item => {
+                // create Li
+                let itemList = document.createElement('li');
+                ulTypesModal.appendChild(itemList); // add to ul
+
+                // create Span
+                let spanList = document.createElement('span');
+                spanList.classList = `tag-type ${item.type.name}`;
+                spanList.textContent = item.type.name;
+                itemList.appendChild(spanList); // add to list
+            })
+        }
+        listingTypesPokemon(); // *** CALL FUNCTION HERE
+    })
 }
 
 // CLOSE MODAL DETAILS POKEMON
