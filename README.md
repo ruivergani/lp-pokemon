@@ -1,6 +1,6 @@
 # Landing Page - Pokemon
  
-Link: 
+Link: https://ruivergani.github.io/lp-pokemon/
 
 Pokemon API Website, has been developed during the CodeBoost course using PokeAPI to filter and manage data.
 
