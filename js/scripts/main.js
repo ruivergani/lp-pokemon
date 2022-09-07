@@ -7,7 +7,6 @@ cardPokemon.forEach(card => { // each card that you click
 });
 closeButton.addEventListener('click', closeDetailsPokemon);
 
-
 // Configuration for the swiper slide to work
 var slide_hero = new Swiper(".slide-hero", {
     effect: 'fade',
@@ -41,7 +40,7 @@ function createCardPokemon(code, type, nome, imagePok) {
     // Card Element
     let card = document.createElement('button');
     card.classList = `card-pokemon js-open-details-pokemon ${type}`;
-    card.setAttribute('code-pokemon', code); // atributo para codigo do pokemon (link modal)
+    card.setAttribute('code-pokemon', code); // attribute for pokemon code (link to the modal)
     areaPokemonsList.appendChild(card); // append all cards
 
     // Div Image
@@ -87,7 +86,6 @@ function listingPokemons(urlApi) { // url from API
     // 1 - Get all pokemons from the API (0 - 9)
     // 2 - Pass results, next, count as parameter
     // 3 - Go through the each pokemon API (array) to get the details from each pokemon
-
         axios({
             method: 'GET',
             url: urlApi
@@ -273,7 +271,6 @@ axios({
 .then((response) => {
     const {results} = response.data
     results.forEach((type, index) => {
-
         if(index < 18){ // avoid index 18
             // Create element left-container
             let itemType = document.createElement('li');
@@ -408,7 +405,6 @@ function filterByTypes(){
                         card.addEventListener('click', openDetailsPokemon);
                     })
                 })
-
             })
         })
     }
@@ -418,8 +414,6 @@ function filterByTypes(){
         listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0');
         btnLoadMore.style.display = "block";
     }
-
-    
 }
 
 // SEARCH INPUT SECTION
