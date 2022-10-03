@@ -16,3 +16,5 @@ Features:
 - Design created on Figma
 
 Date created: 2022, by RUI NETO
+
+![Screenshot 2022-10-03 at 15 37 34](https://user-images.githubusercontent.com/70537459/193604758-4b16306f-92b3-4de8-bf91-95c0f0096d1f.png)
