@@ -4,12 +4,12 @@ The Pokemon API Website has been developed during the CodeBoost course using Pok
 
 ## Functionalities
 
+- Show all pokemon from the API;
 - Swipper JS Slide in the hero section;
 - Filter the Pokemon by type;
 - Pop Up Modal opening all details of each Pokemon;
 - Button to load more Pokemon from API;
 - Search Pokemon from API;
-- 
 
 ## Technologies used
 
